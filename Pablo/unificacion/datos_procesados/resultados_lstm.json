@@ -1,0 +1,66 @@
+{
+  "configuracion": {
+    "seq_length": 60,
+    "train_size": 1342,
+    "val_size": 447,
+    "test_size": 449,
+    "features_base": [
+      "Open",
+      "High",
+      "Low",
+      "Close",
+      "Returns",
+      "Volatility_30"
+    ],
+    "features_sentiment": [
+      "Open",
+      "High",
+      "Low",
+      "Close",
+      "Returns",
+      "Volatility_30",
+      "sentiment",
+      "sentiment_ma7",
+      "sentiment_ma30"
+    ],
+    "arquitectura": "256-128-64",
+    "dropout": 0.2,
+    "optimizer": "Adam",
+    "learning_rate": 0.001
+  },
+  "metricas_test": {
+    "base": {
+      "model": "LSTM Base",
+      "MSE": 223676.13525970269,
+      "RMSE": 472.9441143091884,
+      "MAE": 406.7505063363592,
+      "R²": -0.3900710022999865,
+      "MAPE": 12.651620667513239
+    },
+    "sentiment": {
+      "model": "LSTM + Sentimiento",
+      "MSE": 402777.410244597,
+      "RMSE": 634.6474692651008,
+      "MAE": 563.8404643115359,
+      "R²": -1.5031244290430523,
+      "MAPE": 17.70838755991121
+    },
+    "mejora_porcentual": {
+      "rmse": -34.19079550067058,
+      "mae": -38.62071602322049,
+      "r2": -285.3463651950896
+    }
+  },
+  "historia_entrenamiento": {
+    "base": {
+      "epochs": 71,
+      "final_train_loss": 0.0012738476507365704,
+      "final_val_loss": 0.0018087202915921807
+    },
+    "sentiment": {
+      "epochs": 69,
+      "final_train_loss": 0.0014339882181957364,
+      "final_val_loss": 0.003298557363450527
+    }
+  }
+}

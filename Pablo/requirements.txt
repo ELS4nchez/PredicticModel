@@ -1,0 +1,123 @@
+# =============================================================================
+# REQUIREMENTS.TXT - Proyecto de Análisis de Oro y Sentimientos WSJ
+# =============================================================================
+# Generado: 3 de diciembre de 2025
+# Python: 3.8+
+# 
+# Instalación rápida:
+#   pip install -r requirements.txt
+#
+# Para entorno conda (recomendado):
+#   conda create -n oro_wsj python=3.10
+#   conda activate oro_wsj
+#   pip install -r requirements.txt
+# =============================================================================
+
+# --- MANIPULACIÓN Y ANÁLISIS DE DATOS ---
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# --- VISUALIZACIÓN ---
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.14.0
+kaleido>=0.2.1  # Para exportar gráficos de Plotly a imágenes estáticas
+
+# --- ESTADÍSTICA Y SERIES TEMPORALES ---
+statsmodels>=0.14.0
+
+# --- MACHINE LEARNING ---
+scikit-learn>=1.3.0  # Para Isolation Forest, preprocesamiento y métricas
+
+# --- DEEP LEARNING ---
+# TensorFlow y Keras (para modelos LSTM)
+tensorflow>=2.13.0,<2.16.0
+keras>=2.13.0
+
+# PyTorch (CPU-only, para transformers FinBERT)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.0.0
+
+# --- NLP Y TRANSFORMERS ---
+transformers>=4.30.0  # FinBERT para análisis de sentimientos
+tokenizers>=0.13.0
+sentencepiece>=0.1.99  # Para algunos tokenizadores
+nltk>=3.8.0  # Para procesamiento de texto (tokenización, stopwords)
+
+# --- UTILIDADES GENERALES ---
+tqdm>=4.65.0  # Barras de progreso
+python-dateutil>=2.8.2
+pytz>=2023.3
+
+# --- JUPYTER Y NOTEBOOKS ---
+jupyter>=1.0.0
+notebook>=6.5.0
+ipywidgets>=8.0.0
+ipykernel>=6.23.0
+
+# --- OPCIONAL: EXPORTACIÓN Y REPORTES ---
+openpyxl>=3.1.0  # Para exportar resultados a Excel
+
+# =============================================================================
+# GUÍA DE INSTALACIÓN PASO A PASO
+# =============================================================================
+# 
+# PASO 1: Crear entorno virtual (recomendado)
+# ---------------------------------------------
+#   python -m venv .venv
+#   source .venv/bin/activate  # Linux/Mac
+#   .venv\Scripts\activate     # Windows
+#
+# PASO 2: Actualizar pip
+# -----------------------
+#   pip install --upgrade pip
+#
+# PASO 3: Instalar dependencias
+# ------------------------------
+#   pip install -r requirements.txt
+#
+# PASO 4: PyTorch CPU-only (si falla la instalación automática)
+# --------------------------------------------------------------
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#
+# PASO 5: Descargar recursos NLTK (obligatorio)
+# ----------------------------------------------
+#   python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords'); nltk.download('punkt_tab')"
+#
+# PASO 6: Verificar instalación
+# ------------------------------
+#   python -c "import pandas, numpy, sklearn, tensorflow, transformers, nltk; print('✅ OK')"
+#
+# =============================================================================
+# NOTAS IMPORTANTES
+# =============================================================================
+# 
+# 1. PYTORCH CPU vs GPU:
+#    - Este proyecto usa CPU para PyTorch (más compatible y suficiente)
+#    - Para GPU (NVIDIA CUDA), reemplazar la línea de torch por:
+#      pip install torch torchvision torchaudio
+#
+# 2. TENSORFLOW:
+#    - Versión CPU incluida (compatible con todas las máquinas)
+#    - Para GPU, instalar: tensorflow-gpu (requiere CUDA/cuDNN)
+#
+# 3. MODELOS PRE-ENTRENADOS:
+#    - FinBERT (~500MB) se descarga automáticamente al ejecutar notebook 05
+#    - Los modelos LSTM entrenados se guardan en: unificacion/modelos/
+#
+# 4. REQUISITOS DEL SISTEMA:
+#    - RAM mínima: 8GB (recomendado: 16GB)
+#    - Espacio en disco: ~5GB (incluye datos, modelos y dependencias)
+#    - Python: 3.8, 3.9, 3.10 o 3.11
+#
+# 5. ORDEN DE EJECUCIÓN:
+#    - Los notebooks deben ejecutarse en orden: 01 → 02 → 03 → ... → 08
+#    - Cada notebook genera archivos procesados para los siguientes
+#
+# 6. COMPATIBILIDAD PROBADA:
+#    - ✅ Ubuntu 20.04+ / Debian 11+
+#    - ✅ macOS 12+ (Intel y Apple Silicon)
+#    - ✅ Windows 10/11
+#
+# =============================================================================

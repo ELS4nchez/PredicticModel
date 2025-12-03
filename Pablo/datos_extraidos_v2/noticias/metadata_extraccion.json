@@ -1,0 +1,12 @@
+{
+  "fecha_extraccion": "2025-12-02T13:06:05.708949",
+  "version": "2.0_corregida",
+  "registros_extraidos": 188469,
+  "registros_finales": 188469,
+  "precision_urls": "100.00%",
+  "rango_temporal": {
+    "inicio": "2016-01-01 00:00:00",
+    "fin": "2025-10-24 00:00:00"
+  },
+  "validaciones": {
+    "patron_urls": 

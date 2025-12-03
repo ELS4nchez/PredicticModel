@@ -1,0 +1,38 @@
+{
+  "total_registros": 3614,
+  "metodos": {
+    "IQR": {
+      "outliers": 258,
+      "porcentaje": 7.138904261206419
+    },
+    "Z-Score": {
+      "outliers": 69,
+      "porcentaje": 1.9092418372993913
+    },
+    "Isolation_Forest": {
+      "outliers": 181,
+      "porcentaje": 5.008301051466519
+    }
+  },
+  "consenso": {
+    "outliers": 132,
+    "porcentaje": 3.6524626452684004
+  },
+  "top_10_fechas": [
+    "2025-10-21",
+    "2025-10-16",
+    "2025-04-09",
+    "2025-04-10",
+    "2025-04-16",
+    "2025-04-22",
+    "2025-10-20",
+    "2025-11-10",
+    "2025-10-17",
+    "2025-05-05"
+  ],
+  "estadisticas_outliers": {
+    "precio_promedio": 3676.7405833333332,
+    "retorno_promedio": 0.0026764897424000024,
+    "volatilidad_promedio": 16.9453717958367
+  }
+}
